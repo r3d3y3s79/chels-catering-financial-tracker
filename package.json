@@ -1,0 +1,46 @@
+{
+  "name": "chels-catering-tracker",
+  "version": "0.1.0",
+  "description": "A comprehensive financial tracking application for catering services in Australia",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "jest",
+    "install:all": "npm install && cd client && npm install",
+    "seed": "node server/seeders/run-all.js",
+    "seed:supermarkets": "node server/seeders/supermarkets.seed.js",
+    "seed:products": "node server/seeders/supermarketProducts.seed.js",
+    "seed:ingredients": "node server/seeders/ingredients.seed.js"
+  },
+  "keywords": [
+    "catering",
+    "cost-management",
+    "recipe",
+    "inventory",
+    "profitability",
+    "australia",
+    "supermarket",
+    "shopping-list"
+  ],
+  "author": "Chel's Catering",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.16.0",
+    "tesseract.js": "^4.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  }
+}
